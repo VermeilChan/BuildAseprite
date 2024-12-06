@@ -26,13 +26,13 @@ jobs:
     - name: Download and Extract Aseprite Source
       run: |
         cd ~/src/aseprite
-        curl --proto '=https' --tlsv1.3 -LsSf https://github.com/aseprite/aseprite/releases/download/v1.3.11-beta2/Aseprite-v1.3.11-beta2-Source.zip
+        curl --proto '=https' --tlsv1.3 -LsSf -s https://github.com/aseprite/aseprite/releases/download/v1.3.11-beta2/Aseprite-v1.3.11-beta2-Source.zip
         unzip Aseprite-v1.3.11-beta2-Source.zip
 
     - name: Download and Extract Skia
       run: |
         cd ~/src/deps/skia
-        curl --proto '=https' --tlsv1.3 -LsSf https://github.com/aseprite/skia/releases/download/m102-861e4743af/Skia-Linux-Release-x64-libc++.zip
+        curl --proto '=https' --tlsv1.3 -LsSf -s https://github.com/aseprite/skia/releases/download/m102-861e4743af/Skia-Linux-Release-x64-libc++.zip
         unzip Skia-Linux-Release-x64-libc++.zip
 
     - name: Build Aseprite
